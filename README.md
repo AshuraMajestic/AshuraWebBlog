@@ -2,15 +2,18 @@
 
 # Steps:
 ###  Step 1: Intilaizing app 
+###  Step 2: Intilaizing database
 
 ## Step 1: Intilaizing app 
+
 ```code
 mkdir ashurawebblog
 cd ashurawebblog
 npx create-next-app@latest .
 ```
 
-### you will get somthing like this
+you will get somthing like this
+
 ```code 
 √ Would you like to use TypeScript? ... No / Yes
 √ Would you like to use ESLint? ... No / Yes
@@ -40,4 +43,34 @@ Installing devDependencies:
 - eslint
 - eslint-config-next
 ```
-### Give yes to all and your next js project is ready, you can see it using `npm run dev`
+
+Give yes to all and your next js project is ready, you can see it using `npm run dev`
+
+
+## Step 2: Intilaizing database
+
+We will be Using Prisma with postgres in cockroachdb
+
+```code
+npm install --save-dev ts-node
+npm install prisma --save-dev
+npx prisma init --datasource-provider postgresql
+```
+
+Change your DATABASE_URL in .nv according to your database configuration
+
+### Now we will create model for the blog
+
+Go to `prisma/schema.prisma` and make the models
+```javascript
+model Post {
+  id           String   @id @default(uuid())
+  title        String
+  introduction String
+  content      String
+  minutes      String
+  username     String   @default("AshuraMajestic")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+```
