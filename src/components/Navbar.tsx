@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logoLight from "../assests/logolight.png";
-import logoDark from "../assests/logodark.png";
+import logoLight from "../assets/logolight.png";
+import logoDark from "../assets/logodark.png";
 import Image from "next/image";
 import { useState } from "react";
 import DarkModeToggle from "../components/DarkModeToggle";
