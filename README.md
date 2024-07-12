@@ -5,6 +5,7 @@
 ###  Step 2: Intilaizing database
 ###  Step 3: Making admin side
 ###  Step 4: Designing admin side
+###  Step 5: Admin Authentication
 
 ## Step 1: Intilaizing app 
 
@@ -703,3 +704,77 @@ export default async function EditBlogsPage({
 ```
 
 Now our admin side is ready to go 
+
+## Step 5: Admin Authentication
+
+For admin Authentication make a `middleware.ts` in `src` directory
+
+Add ther following Code
+
+```javascript
+import { NextRequest, NextResponse } from "next/server";
+import { isValidPassword } from "./lib/isValidPassword";
+
+export async function middleware(req: NextRequest) {
+  if ((await isAuthenticated(req)) === false) {
+    return new NextResponse("Unauthorized", {
+      status: 401,
+      headers: { "WWW-Authenticate": "Basic" },
+    });
+  }
+}
+async function isAuthenticated(req: NextRequest) {
+  const authHeader =
+    req.headers.get("authorization") || req.headers.get("Authorization");
+
+  if (authHeader == null) {
+    return false;
+  }
+  const [username, password] = Buffer.from(authHeader.split(" ")[1], "base64")
+    .toString()
+    .split(":");
+
+  return (
+    username === process.env.ADMIN_USERNAME &&
+    (await isValidPassword(password, process.env.ADMIN_PASSWORD as string))
+  );
+}
+
+export const config = {
+  matcher: "/admin/:path*",
+};
+
+```
+
+Now add a `isValidPassword.ts` in `src/libs` directory
+
+```ts
+export async function isValidPassword(password: string, hashPassword: string) {
+  return (await hashedPassword(password)) === hashPassword;
+}
+
+async function hashedPassword(password: string) {
+  const arrayBuffer = await crypto.subtle.digest(
+    "SHA-512",
+    new TextEncoder().encode(password)
+  );
+  return Buffer.from(arrayBuffer).toString("base64");
+}
+
+```
+
+Now you will be only able to go to admin side if you enter a password
+
+Now you have to add both password and username in the .env folder
+
+```.environment
+
+ADMIN_USERNAME=Hello
+ADMIN_PASSWORD=huhuoihuiodhws483809i===
+```
+
+- You can get hashed password by making the middleware.ts return false 
+- Then You Have to add console.log(hashedPassword(password)) in the isValidPassword() file and then when you enter ther password in the page you will get hashewd version and you can then use it for yourself 
+- Dont forget to call the function of isValidPassword
+
+ 
