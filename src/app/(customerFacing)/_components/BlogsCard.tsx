@@ -7,7 +7,7 @@ type BlogCardProps = {
   username: string;
 };
 import Image from "next/image";
-import IMG from "../../../assests/pp.png";
+import IMG from "../../../assets/pp.png";
 import Link from "next/link";
 
 export function BlogCard({

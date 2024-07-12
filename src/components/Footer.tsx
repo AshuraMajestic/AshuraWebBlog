@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pp from "../assests/pp.png";
+import pp from "../assets/pp.png";
 
 export default function Footer() {
   return (
