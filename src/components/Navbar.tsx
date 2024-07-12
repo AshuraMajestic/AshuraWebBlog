@@ -99,7 +99,7 @@ export default function Navbar() {
           </ul>
           <div className="flex items-center mt-4 md:mt-0">
             <DarkModeToggle
-              className="transition"
+              // className="transition"
               isChecked={theme === "dark"}
               handleToggle={toggleTheme}
             />
