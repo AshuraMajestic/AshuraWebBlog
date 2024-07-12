@@ -13,8 +13,7 @@ import Image from "next/image";
 
 export default function Contact() {
   const { theme } = useTheme();
-  const handleEmailClick = (e) => {
-    e.preventDefault();
+  const handleEmailClick = () => {
     window.location.href = "mailto:ashuramajestic@gmail.com";
   };
   return (
