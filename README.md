@@ -6,6 +6,7 @@
 ###  Step 3: Making admin side
 ###  Step 4: Designing admin side
 ###  Step 5: Admin Authentication
+###  Step 6: Frontend 
 
 ## Step 1: Intilaizing app 
 
@@ -778,3 +779,5 @@ ADMIN_PASSWORD=huhuoihuiodhws483809i===
 - Dont forget to call the function of isValidPassword
 
  
+## Step 6: Frontend
+Design as you needed 

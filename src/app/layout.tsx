@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import { cn } from "@/lib/utils";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+import { ThemeProvider } from "../components/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Ashura Web Blog",
@@ -28,14 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "bg-background min-h-screen font-sans antialiased",
-          inter.variable
-        )}
-      >
-        {children}
-      </body>
+      <ThemeProvider>
+        <body
+          className={cn(
+            "min-h-screen min-w-screen overflow-x-hidden antialiased"
+          )}
+        >
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,11 +72,198 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  background-color: #ddd0c8;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.blog-style .line,
+.about-style .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.icons {
+  width: 80px;
+  height: 80px;
+}
+.typed-cursor {
+  color: white;
+  font-size: 36px;
+}
+.pp.big {
+  height: 300px;
+  width: 300px;
+}
+.links {
+  height: 50px;
+}
+.links div {
+  height: 100%;
+  width: 100%;
+}
+.links div img {
+  height: 50px;
+  width: 50px;
+}
+.horizontal {
+  width: 2px;
+  height: 50px;
+  background-color: #a68585;
+}
+.text {
+  font-family: "Main";
+}
+
+/* Light */
+body.light {
+  background-color: #ddd0c8;
+  color: black;
+}
+body.light header,
+body.light nav,
+body.light footer {
+  background-color: #ddd0c8;
+  color: black;
+}
+body.light header nav ul li.active-link {
+  border-bottom: #24305e solid 2px;
+}
+body.light button.active {
+  background-color: #323232;
+  color: white;
+}
+body.light button {
+  background-color: transparent;
+  border: #323232 2px solid;
+  color: black;
+}
+body.light .home-style .heading {
+  color: black;
+}
+body.light .home-style .blog {
+  background-color: #323232;
+}
+body.light .home-style .blog button {
+  background-color: #24305e;
+  color: white;
+}
+
+/* Blog detail light style */
+
+body.light .blog-style .blog-detail {
+  background-color: #323232;
+}
+body.light .blog-style .blog-detail h1,
+body.light .blog-style .blog-detail h2,
+body.light .blog-style .blog-detail h3,
+body.light .blog-style .blog-detail h4,
+body.light .blog-style .blog-detail h5,
+body.light .blog-style .blog-detail h6,
+body.light .blog-style .blog-detail strong {
+  color: white;
+}
+
+/* About Style  light*/
+body.light .about-style {
+  color: black;
+}
+body.light .about-style .about-box {
+  background-color: #323232;
+  color: white;
+}
+body.light .about-style .sub-title {
+  color: #373737;
+}
+body.light .about-style .line {
+  background-color: black;
+}
+
+/* Contact light style */
+body.light .contact-style {
+  color: black;
+}
+
+/* ================================================================================= */
+
+/* Dark */
+body.dark {
+  background-color: #000f0a;
+  color: white;
+}
+body.dark header,
+body.dark nav,
+body.dark footer {
+  background-color: #000f0a;
+  color: white;
+}
+body.dark footer .sub-text {
+  color: #499b6b;
+}
+body.dark header nav ul li.active-link {
+  border-bottom: white solid 2px;
+}
+body.dark button.active {
+  background-color: white;
+  color: black;
+}
+body.dark button {
+  background-color: transparent;
+  border: white 2px solid;
+  color: white;
+}
+body.dark .home-style .heading {
+  color: #53af79;
+}
+body.dark .home-style .blog {
+  background-color: #0d1b16;
+}
+body.dark .home-style .blog button {
+  background-color: #03bb47;
+  color: white;
+  border: none;
+}
+
+/* Blog detail light style */
+
+body.dark .blog-style .blog-detail {
+  background-color: #0d1b16;
+}
+body.dark .blog-style .blog-detail code {
+  color: white;
+}
+body.dark .blog-style .blog-detail h1,
+body.dark .blog-style .blog-detail h2,
+body.dark .blog-style .blog-detail h3,
+body.dark .blog-style .blog-detail h4,
+body.dark .blog-style .blog-detail h5,
+body.dark .blog-style .blog-detail h6,
+body.dark .blog-style .blog-detail strong {
+  color: #53af79;
+}
+
+/* About Style  light*/
+body.dark .about-style {
+  color: white;
+}
+body.dark .about-style .about-box {
+  background-color: #0d1b16;
+  color: white;
+}
+body.dark .about-style .sub-title {
+  color: #5000ff;
+}
+body.dark .about-style .heading {
+  color: #53af79;
+}
+body.dark .about-style .line {
+  background-color: #5000ff;
+}
+
+/* Contact light style */
+body.dark .contact-style {
+  color: white;
 }
