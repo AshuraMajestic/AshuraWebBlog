@@ -53,17 +53,28 @@ import icon18 from "./_assets/canva.svg";
 import icon19 from "./_assets/illustrator.svg";
 import icon20 from "./_assets/vs.svg";
 import icon21 from "./_assets/android.svg";
+
+import prismalight from "./_assets/prismalight.svg";
+import prismadark from "./_assets/prismadark.svg";
+import nextjslight from "./_assets/next-jslight.svg";
+import nextjsdark from "./_assets/next-jsdark.svg";
+
+import mysql from "./_assets/mysql.svg";
+import cockroachdb from "./_assets/cockroachdb.svg";
+import postgresql from "./_assets/postgresql.svg";
+
 import Image from "next/image";
+import { useTheme } from "@/components/ThemeContext";
 
 export default function AboutMe() {
   const typedRef = useRef(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const options = {
       strings: [
         "A PSEUDO DEVELOPER",
-        "A MERN STACK DEVELOPER",
-        "A DJANGO FULL-STACK DEVELOPER",
+        "A FULL-STACK DEVELOPER",
         "AN ANDRIOD DEVELOPER",
       ],
       typeSpeed: 80,
@@ -343,8 +354,7 @@ export default function AboutMe() {
             <div className="col-span  grid items-center justify-center  mt-10">
               <Image
                 className="icons row"
-                src={icon11dark}
-                // src={theme === "dark" ? icon11dark : icon11light}
+                src={theme === "dark" ? icon11dark : icon11light}
                 alt="Express"
               />
               <h5 className="row text-center  text-xl text">ExpressJS</h5>
@@ -352,6 +362,22 @@ export default function AboutMe() {
             <div className="col-span  grid items-center justify-center  mt-10">
               <Image className="icons row" src={icon12} alt="Bootstrap" />
               <h5 className="row text-center  text-xl text">Bootstrap</h5>
+            </div>
+            <div className="col-span  grid items-center justify-center  mt-10">
+              <Image
+                className="icons row"
+                src={theme === "dark" ? prismadark : prismalight}
+                alt="Prisma"
+              />
+              <h5 className="row text-center  text-xl text">Prisma</h5>
+            </div>
+            <div className="col-span  grid items-center justify-center  mt-10">
+              <Image
+                className="icons row"
+                src={theme === "dark" ? nextjsdark : nextjslight}
+                alt="Nextjs"
+              />
+              <h5 className="row text-center  text-xl text">NextJS</h5>
             </div>
           </div>
           <div className="heading text text-3xl my-10">Databases</div>
@@ -364,22 +390,36 @@ export default function AboutMe() {
               <Image className="icons row" src={icon14} alt="MongoDB" />
               <h5 className="row text-center  text-xl text">MongoDB</h5>
             </div>
+            <div className="col-span  grid items-center justify-center ">
+              <Image
+                className="icons row"
+                src={cockroachdb}
+                alt="CockroachDb"
+              />
+              <h5 className="row text-center  text-xl text">CockroachDB</h5>
+            </div>
+            <div className="col-span  grid items-center justify-center ">
+              <Image className="icons row" src={postgresql} alt="Postgresql" />
+              <h5 className="row text-center  text-xl text">PostgreSQL</h5>
+            </div>
+            <div className="col-span  grid items-center justify-center ">
+              <Image className="icons row" src={mysql} alt="MySql" />
+              <h5 className="row text-center  text-xl text">MySQL</h5>
+            </div>
           </div>
           <div className="heading text text-3xl my-10">Version Control</div>
           <div className="grid grid-cols-4 gap-x-4">
             <div className="col-span grid  items-center justify-center ">
               <Image
                 className="icons row"
-                src={icon15dark}
-                // src={theme === "dark" ? icon15dark : icon15light}
+                src={theme === "dark" ? icon15dark : icon15light}
                 alt="Git"
               />
               <h5 className="row text-center text-xl text">Git</h5>
             </div>
             <div className="col-span  grid items-center justify-center ">
               <Image
-                src={icon16dark}
-                // src={theme === "dark" ? icon16dark : icon16light}
+                src={theme === "dark" ? icon16dark : icon16light}
                 className="icons row"
                 alt="GitHub"
               />
@@ -391,8 +431,7 @@ export default function AboutMe() {
             <div className="col-span grid  items-center justify-center ">
               <Image
                 className="icons row"
-                src={icon17dark}
-                // src={theme === "dark" ? icon17dark : icon17light}
+                src={theme === "dark" ? icon17dark : icon17light}
                 alt="Figma"
               />
               <h5 className="row text-center  text-xl text">Figma</h5>
