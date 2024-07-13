@@ -8,6 +8,9 @@ const blogFetcher = () => {
 };
 export default async function HomePage() {
   const blogs = await blogFetcher();
+  if (!blogs) {
+    <p className="text-white mt-20">No blog posts available.</p>;
+  }
   return (
     <div className="container sm:mx-auto md:mx-auto lg:mx-auto home-style mt-24 z-0">
       <div className="grid lg:grid-cols-3 md:grid-cols-5 lg:gap-x-4 sm:grid-cols-1  w-full">
@@ -16,11 +19,9 @@ export default async function HomePage() {
             CODING ARTICLES
           </h1>
           <div className="blogs grid max-sm:max-auto">
-            {blogs.length > 0 ? (
-              blogs.map((blog) => <BlogCard key={blog.id} {...blog} />)
-            ) : (
-              <p className="text-white">No blog posts available.</p>
-            )}
+            {blogs.map((blog) => (
+              <BlogCard key={blog.id} {...blog} />
+            ))}
           </div>
         </div>
         <div className="col-span-1"></div>
