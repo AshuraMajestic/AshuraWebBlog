@@ -1,10 +1,11 @@
+"use client";
 import Image from "next/image";
 import logoLight from "../assets/logolight.png";
 import logoDark from "../assets/logodark.png";
 import { useTheme } from "./ThemeContext";
 
 export default function Footer() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const logo = theme === "dark" ? logoDark : logoLight;
   return (
     <footer className=" shadow-lg hidden sm:block md:block bottom-0 w-full z-50">
@@ -13,7 +14,7 @@ export default function Footer() {
         <div className="sm:col-span-5 md:col-span-3 lg:col-span-3   flex items-center">
           <div className="container mx-auto flex items-center justify-between h-24 z-100">
             <div className="flex items-center">
-              <Image className="h-16 w-16 rounded-full pp" src={logo} alt="" />
+              <Image className="h-16 w-20 rounded-full pp" src={logo} alt="" />
               <span className="ml-4 logo-text uppercase font-black">
                 Ashura
                 <br />
