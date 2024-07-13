@@ -46,14 +46,3 @@ export function BlogCard({
     </div>
   );
 }
-{
-  /* 
-            {myData.length > 0 ? (
-              myData.map((post) => (
-                
-              ))
-            ) : (
-              <p className="text-white">No blog posts available.</p>
-            )}
-          </div> */
-}

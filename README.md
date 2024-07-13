@@ -61,7 +61,7 @@ npm install prisma --save-dev
 npx prisma init --datasource-provider postgresql
 ```
 
-Change your DATABASE_URL in .nv according to your database configuration
+Change your DATABASE_URL in .env according to your database configuration
 
 ### Now we will create model for the blog
 

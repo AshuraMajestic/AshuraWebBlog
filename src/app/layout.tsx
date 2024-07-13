@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       url: "https://www.linkedin.com/in/krutva-patel-0a9498257",
     },
   ],
+  icons: {
+    icon: "/pp.png",
+  },
 };
 
 export default function RootLayout({
