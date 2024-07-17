@@ -4,7 +4,11 @@ import { BlogCard } from "./_components/BlogsCard";
 import db from "@/db/db";
 
 const blogFetcher = () => {
-  return db.post.findMany({});
+  return db.post.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 };
 export default async function HomePage() {
   const blogs = await blogFetcher();
