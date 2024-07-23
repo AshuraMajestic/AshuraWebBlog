@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "../components/ThemeContext";
@@ -30,20 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-Z3668DY1B5"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-Z3668DY1B5');
-          `}
-        </script>
-      </head>
+      <GoogleAnalytics />
       <ThemeProvider>
         <body
           className={cn(
