@@ -22,4 +22,5 @@ model Post {
   username     String   @default("AshuraMajestic")
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+  imagePaths   String[]
 }

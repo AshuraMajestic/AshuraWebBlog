@@ -102,7 +102,9 @@ body.light .blog-style .blog-detail h6,
 body.light .blog-style .blog-detail strong {
   color: white;
 }
-
+body.light .blog-style .blog-detail a {
+  color: blue;
+}
 /* About Style  light*/
 body.light .about-style {
   color: black;
