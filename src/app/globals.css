@@ -182,7 +182,9 @@ body.dark .blog-style .blog-detail h6,
 body.dark .blog-style .blog-detail strong {
   color: #53af79;
 }
-
+body.dark .blog-style .blog-detail a {
+  color: blue;
+}
 /* About Style  light*/
 body.dark .about-style {
   color: white;
