@@ -15,7 +15,7 @@ export default function BlogForm({ blog }: { blog?: Post | null }) {
   );
 
   return (
-    <form className="space-y-8" action={action}>
+    <form className="space-y-8" action={action} encType="multipart/form-data">
       <div className="space-y-2">
         <label htmlFor="title">Title</label>
         <Input
@@ -65,6 +65,16 @@ export default function BlogForm({ blog }: { blog?: Post | null }) {
         {error.minutes && (
           <div className="text-destructive">{error.minutes}</div>
         )}
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="images">Upload Images</Label>
+        <Input
+          type="file"
+          id="images"
+          name="images"
+          accept="image/*"
+          multiple
+        />
       </div>
 
       <SubmitButton />

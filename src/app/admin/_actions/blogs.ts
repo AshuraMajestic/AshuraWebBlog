@@ -4,6 +4,9 @@ import db from "@/db/db";
 import { z } from "zod";
 import { notFound, redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import path from "path";
+import fs from "fs";
+import { saveImageToGridFS } from "@/lib/gridFs";
 
 const addSchema = z.object({
   title: z.string().min(1),
@@ -20,12 +23,24 @@ export async function addBlog(prevState: unknown, formData: FormData) {
 
   const data = result.data;
 
-  await db.post.create({
+  const blogPost = await db.post.create({
     data: {
       title: data.title,
       introduction: data.introduction,
       content: data.content,
       minutes: data.minutes,
+    },
+  });
+  const blogId = blogPost.id;
+  const files = formData.getAll("images") as File[];
+  const imageUrls = await Promise.all(
+    files.map((file) => saveImageToGridFS(file, blogId))
+  );
+
+  await db.post.update({
+    where: { id: blogId },
+    data: {
+      imagePaths: imageUrls,
     },
   });
   revalidatePath("/");
