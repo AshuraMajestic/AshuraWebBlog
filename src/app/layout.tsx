@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Ashura Web Blog",
   description:
     "A Web Blog created to share various blogs related to the computer programming",
+  verification: {
+    google: "XpFSHFij6j7H-bkBaXUU1VNPdxQxHK49ntZDZ5I38CQ",
+  },
   authors: [
     {
       name: "Ashura Majestic",
