@@ -87,7 +87,11 @@ body.light .home-style .blog button {
   background-color: #24305e;
   color: white;
 }
-
+body.light .home-style .blog button:hover {
+  background-color: white;
+  border: 2px solid #24305e;
+  color: #24305e;
+}
 /* Blog detail light style */
 
 body.light .blog-style .blog-detail {
@@ -164,7 +168,11 @@ body.dark .home-style .blog button {
   color: white;
   border: none;
 }
-
+body.dark .home-style .blog button:hover {
+  background-color: white;
+  border: 2px solid #03bb47;
+  color: #03bb47;
+}
 /* Blog detail light style */
 
 body.dark .blog-style .blog-detail {

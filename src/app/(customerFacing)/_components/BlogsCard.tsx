@@ -38,8 +38,8 @@ export function BlogCard({
       </div>
       <div className="row my-5">
         <Link href={`/blog/${id}`}>
-          <button className="px-2 py-2 rounded-md text-white font-semibold">
-            Read More
+          <button className="px-3 py-2 rounded-xl font-semibold">
+            Read Full Blog
           </button>
         </Link>
       </div>
