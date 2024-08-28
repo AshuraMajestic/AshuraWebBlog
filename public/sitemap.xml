@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ashurawebblog.netlify.app/</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ashurawebblog.netlify.app/aboutme</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ashurawebblog.netlify.app/contact</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ashurawebblog.netlify.app/blog/66ca238249b8cf8e50cafa45</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ashurawebblog.netlify.app/blog/66b8aedfb3dbfdc505bb539f</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ashurawebblog.netlify.app/blog/6697bf4d979bedf5e002792b</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ashurawebblog.netlify.app/blog/66922bc69b1f2d9e547d7ccb</loc>
+  <lastmod>2024-08-28T09:42:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
