@@ -10,6 +10,12 @@ import Image from "next/image";
 import IMG from "../../../assets/pp.png";
 import Link from "next/link";
 
+function createSlug(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric characters with hyphens
+    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
+}
 export function BlogCard({
   id,
   title,
@@ -17,6 +23,7 @@ export function BlogCard({
   createdAt,
   username,
 }: BlogCardProps) {
+  const slug = createSlug(title);
   return (
     <div key={id} className="blog bg-black grid row w-100 my-5 px-8 rounded-xl">
       <div className="row my-4 text-white font-bold text-3xl">
@@ -37,7 +44,7 @@ export function BlogCard({
         <p>{introduction}</p>
       </div>
       <div className="row my-5">
-        <Link href={`/blog/${id}`}>
+        <Link href={`/blog/${id}/${slug}`}>
           <button className="px-3 py-2 rounded-xl font-semibold">
             Read Full Blog
           </button>

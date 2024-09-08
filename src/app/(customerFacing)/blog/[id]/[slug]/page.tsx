@@ -1,10 +1,10 @@
 "use server";
 import db from "@/db/db";
-import BlogDetail from "./_components/BlogDetail";
+import BlogDetail from "./../_components/BlogDetail";
 export default async function BlogShowPage({
-  params: { id },
+  params: { id, slug },
 }: {
-  params: { id: string };
+  params: { id: string; slug: string };
 }) {
   const data = await db.post.findUnique({ where: { id } });
   if (!data) {
