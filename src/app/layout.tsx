@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "../components/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "Ashura Web Blog",
+  title: "Krutva Web Blog",
   description:
     "A Web Blog created to share various blogs related to the computer programming",
   verification: {

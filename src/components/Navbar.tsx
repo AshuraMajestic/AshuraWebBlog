@@ -26,9 +26,9 @@ export default function Navbar() {
     <header className="shadow-lg fixed top-0 w-full z-50 ">
       <div className="container mx-auto flex items-center h-24">
         <a href="/" className="flex items-center justify-center">
-          <Image className="h-16 w-16" src={logo} alt="Ashura Blogs Logo" />
+          <Image className="h-16 w-16" src={logo} alt="Krutva Blogs Logo" />
           <span className="ml-4 logo-Text uppercase font-black">
-            Ashura
+            Krutva
             <br />
             Blogs
           </span>

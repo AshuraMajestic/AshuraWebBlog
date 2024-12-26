@@ -73,9 +73,9 @@ export default function AboutMe() {
   useEffect(() => {
     const options = {
       strings: [
-        "A PSEUDO DEVELOPER",
-        "A FULL-STACK DEVELOPER",
-        "AN ANDRIOD DEVELOPER",
+        "A USER INTERFACE DESIGNER",
+        "A USER EXPERIENCE DESINGER",
+        "AN GRAPHIC DESINGER",
       ],
       typeSpeed: 80,
       backSpeed: 80,
@@ -115,7 +115,7 @@ export default function AboutMe() {
         <div className="col-span-1"></div>
         <div className="main-title col-span-3 flex flex-col items-center justify-center">
           <h1 className="text-7xl text-uppercase  row title pb-2 tracking-wide">
-            ASHURA MAJESTIC
+            KRUTVA PATEL
           </h1>
           <div className="line row"></div>
           <div className="swipe-container">
@@ -132,13 +132,13 @@ export default function AboutMe() {
         <div className="col-span-3 flex flex-col items-center  justify-center">
           <div className="bg-content about-box w-full px-8 rounded-lg">
             <p className="text-3xl pt-24 pb-20 text tracking-wide">
-              I am Ashura Majestic, I am Still learning and started working on
+              I am Krutva Patel, I am Still learning and started working on
               my Dreams. This is a website Created Just for Fun as I want to
               Start Uploading some blogs.
             </p>
             <div className="text-end">
               <p className="text-2xl pb-4 text tracking-wide">
-                <span>-</span> Psuedo Developer
+                <span>-</span> UI/UX Developer
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function AboutMe() {
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
               >
-                <SwiperSlide
+                {/* <SwiperSlide
                   className="h-60 relative"
                   onClick={handleClick("portfolio")}
                 >
@@ -184,13 +184,13 @@ export default function AboutMe() {
 
                   <div className="absolute bottom-0 left-0 right-0 p-4 ">
                     <h1 className="text-xl text-white font-bold">
-                      Ashura Portfolio
+                        ASHURA Portfolio
                     </h1>
                     <p className="text-sm text-white">
                       My First Portfolio Using MERN Stack Development
                     </p>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide
                   className="h-60 relative"
                   onClick={handleClick("git-smartmartpos")}
@@ -223,11 +223,11 @@ export default function AboutMe() {
                       Workout Buddy
                     </h1>
                     <p className="text-sm text-white">
-                      A Website which help you to stay healthy and Fit.
+                      A Website Designed which help you to stay healthy and Fit.
                     </p>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide
+                {/* <SwiperSlide
                   className="h-60 relative"
                   onClick={handleClick("weather")}
                 >
@@ -242,7 +242,7 @@ export default function AboutMe() {
                       A website which uses api to show Weather info.
                     </p>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide
                   className="h-60 relative"
                   onClick={handleClick("contact")}
@@ -254,10 +254,10 @@ export default function AboutMe() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 ">
                     <h1 className="text-xl text-white font-bold">
-                      Contact Ashura Page
+                      Contact Krutva Page
                     </h1>
                     <p className="text-sm text-white">
-                      A Website created to to learn backend api and databases.
+                      A Website made for learning designing Using Figma.
                     </p>
                   </div>
                 </SwiperSlide>
@@ -278,7 +278,7 @@ export default function AboutMe() {
                     </p>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide
+                {/* <SwiperSlide
                   className="h-60 relative"
                   onClick={handleClick("love")}
                 >
@@ -294,7 +294,7 @@ export default function AboutMe() {
                       and js concepts.
                     </p>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
               </Swiper>
             </>
           </div>
@@ -312,22 +312,22 @@ export default function AboutMe() {
               <Image className="icons row" src={icon1} alt="python" />
               <h5 className="row text-center text-xl text">Python</h5>
             </div>
-            <div className="col-span grid items-center justify-center ">
+            {/* <div className="col-span grid items-center justify-center ">
               <Image className="icons row" src={icon2} alt="c" />
               <h5 className="row text-center text-xl text">C</h5>
-            </div>
+            </div> */}
             <div className="col-span grid items-center justify-center ">
               <Image className="icons row" src={icon3} alt="java" />
               <h5 className="row text-center text-xl text">Java</h5>
             </div>
-            <div className="col-span grid items-center justify-center ">
+            {/* <div className="col-span grid items-center justify-center ">
               <Image className="icons row" src={icon4} alt="javascript" />
               <h5 className="row text-center text-xl text">JavaScript</h5>
-            </div>
+            </div> */}
           </div>
           <div className="heading text-3xl my-10 text">Web Technologies</div>
           <div className="grid grid-cols-4 gap-x-4">
-            <div className="col-span grid items-center justify-center ">
+            {/* <div className="col-span grid items-center justify-center ">
               <Image className="icons row" src={icon5} alt="NodeJS" />
               <h5 className="row text-center  text-xl text">Python</h5>
             </div>
@@ -342,7 +342,7 @@ export default function AboutMe() {
             <div className="col-span  grid items-center justify-center ">
               <Image className="icons row" src={icon8} alt="tailwindcss" />
               <h5 className="row text-center  text-xl text">Tailwind</h5>
-            </div>
+            </div> */}
             <div className="col-span  grid items-center justify-center  mt-10">
               <Image className="icons row" src={icon9} alt="Html" />
               <h5 className="row text-center  text-xl text">Html</h5>
@@ -351,7 +351,7 @@ export default function AboutMe() {
               <Image className="icons row" src={icon10} alt="css" />
               <h5 className="row text-center  text-xl text">CSS</h5>
             </div>
-            <div className="col-span  grid items-center justify-center  mt-10">
+            {/* <div className="col-span  grid items-center justify-center  mt-10">
               <Image
                 className="icons row"
                 src={theme === "dark" ? icon11dark : icon11light}
@@ -378,9 +378,9 @@ export default function AboutMe() {
                 alt="Nextjs"
               />
               <h5 className="row text-center  text-xl text">NextJS</h5>
-            </div>
+            </div> */}
           </div>
-          <div className="heading text text-3xl my-10">Databases</div>
+          {/* <div className="heading text text-3xl my-10">Databases</div>
           <div className="grid grid-cols-4 gap-x-4">
             <div className="col-span grid  items-center justify-center ">
               <Image className="icons row" src={icon13} alt="Firebase" />
@@ -425,7 +425,7 @@ export default function AboutMe() {
               />
               <h5 className="row text-center  text-xl text">GitHub</h5>
             </div>
-          </div>
+          </div> */}
           <div className="heading text text-3xl my-10">Design Tools</div>
           <div className="grid grid-cols-4 gap-x-4">
             <div className="col-span grid  items-center justify-center ">
@@ -445,8 +445,8 @@ export default function AboutMe() {
               <h5 className="row text-center  text-xl text">Illustrator</h5>
             </div>
           </div>
-          <div className="heading text text-3xl my-10">IDE</div>
-          <div className="grid grid-cols-4 gap-x-4">
+          {/* <div className="heading text text-3xl my-10">IDE</div> */}
+          {/* <div className="grid grid-cols-4 gap-x-4">
             <div className="col-span grid  items-center justify-center ">
               <Image className="icons row" src={icon20} alt="VS code" />
               <h5 className="row text-center  text-xl text">VS code</h5>
@@ -455,13 +455,13 @@ export default function AboutMe() {
               <Image className="icons row" src={icon21} alt="studio" />
               <h5 className="row text-center  text-xl text">Android Studio</h5>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="hidden lg:block lg:col-span-1"></div>
       </section>
       <div className="line mt-24 w-full"></div>
       <div className="text-center my-5  text-2xl">
-        “Jack Of All Trades, Master Of None”
+        “Eyes of Designer Finds beauty in Everything.”
       </div>
     </div>
   );

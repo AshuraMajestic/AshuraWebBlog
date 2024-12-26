@@ -31,7 +31,7 @@ export function BlogCard({
       </div>
       <div className="row flex flex-row items-center ">
         <Image src={IMG} alt="profile" className="w-9 rounded-full" />
-        <p className="ml-2 text-white">{username}</p>
+        <p className="ml-2 text-white">krutvapatel</p>
         <p className="ml-5 text-white">
           {createdAt.toLocaleDateString("en-US", {
             month: "short",

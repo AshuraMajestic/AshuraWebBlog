@@ -12,7 +12,7 @@ export default async function BlogShowPage({
   } else {
     return (
       <BlogDetail
-        username={data?.username}
+        username={"krutvapatel"}
         title={data?.title}
         introduction={data?.introduction}
         content={data?.content}

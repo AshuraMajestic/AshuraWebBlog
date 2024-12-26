@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function Contact() {
   const { theme } = useTheme();
   const handleEmailClick = () => {
-    window.location.href = "mailto:ashuramajestic@gmail.com";
+    window.location.href = "mailto:sugarvikram098@gmail.com";
   };
   return (
     <div className="container mx-auto contact-style min-h-screen">
@@ -31,23 +31,23 @@ export default function Contact() {
           </div>
           <div className="grid grid-cols-5 links w-full">
             <div className="hidden lg:block lg:col-span-1"></div>
-            <div className="col-span-5 lg:col-span-3 grid grid-cols-3 mt-2">
-              <div className="flex justify-center items-center">
+            <div className="col-span-5 ml-8 lg:col-span-4 grid grid-cols-3 mt-2">
+              {/* <div className="flex justify-center items-center">
                 <Link
                   href={`https://www.instagram.com/ashuramajestic/`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
-                    alt="Intagram Ashura Majestic"
+                    alt="Instagram Ashura Majestic"
                     src={theme === "dark" ? icon1dark : icon1light}
                     className="col-1"
                   />
-                </Link>
-              </div>
+                </Link> */}
+              {/* </div> */}
               <div className="flex justify-center items-center pt-1">
                 <a
-                  href="mailto:ashuramajestic@gmail.com"
+                  href="mailto:sugarvikram098@gmail.com"
                   onClick={handleEmailClick}
                 >
                   <Image alt="" src={icon2} className="col-1" />
@@ -55,12 +55,12 @@ export default function Contact() {
               </div>
               <div className="flex justify-center items-center">
                 <Link
-                  href={`https://github.com/AshuraMajestic`}
+                  href={`https://github.com/SuGAr9807`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
-                    alt="Github Ashura"
+                    alt="Github Krutva"
                     src={theme === "dark" ? icon3dark : icon3light}
                     className="col-1"
                   />

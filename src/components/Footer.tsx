@@ -16,12 +16,13 @@ export default function Footer() {
             <div className="flex items-center">
               <Image className="h-16 w-20 rounded-full pp" src={logo} alt="" />
               <span className="ml-4 logo-text uppercase font-black">
-                Ashura
+                Krutva
                 <br />
                 Blogs
               </span>
               <div className="horizontal mx-3"></div>
-              <span className="sub-text">Copyright © 2024 @ashuramajestic</span>
+              <span className="sub-text">Copyright © 2024 @krutvapatel
+              </span>
             </div>
             <div className="flex items-center">
               <span className="sub-text text-right">
