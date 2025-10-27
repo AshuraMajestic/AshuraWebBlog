@@ -31,8 +31,8 @@ export default function Contact() {
           </div>
           <div className="grid grid-cols-5 links w-full">
             <div className="hidden lg:block lg:col-span-1"></div>
-            <div className="col-span-5 ml-8 lg:col-span-4 grid grid-cols-3 mt-2">
-              {/* <div className="flex justify-center items-center">
+            <div className="col-span-8 ml-8 lg:col-span-4 grid grid-cols-5 mt-2">
+              <div className="flex justify-center items-center">
                 <Link
                   href={`https://www.instagram.com/ashuramajestic/`}
                   target="_blank"
@@ -43,11 +43,11 @@ export default function Contact() {
                     src={theme === "dark" ? icon1dark : icon1light}
                     className="col-1"
                   />
-                </Link> */}
-              {/* </div> */}
+                </Link>
+              </div>
               <div className="flex justify-center items-center pt-1">
                 <a
-                  href="mailto:sugarvikram098@gmail.com"
+                  href="mailto:ashuramajestic@gmail.com"
                   onClick={handleEmailClick}
                 >
                   <Image alt="" src={icon2} className="col-1" />
@@ -55,7 +55,7 @@ export default function Contact() {
               </div>
               <div className="flex justify-center items-center">
                 <Link
-                  href={`https://github.com/SuGAr9807`}
+                  href={`https://github.com/AshuraMajestic`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
